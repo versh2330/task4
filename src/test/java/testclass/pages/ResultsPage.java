@@ -46,7 +46,7 @@ public class ResultsPage extends BaseForm {
     }
 
 
-//@Parameters({"Year", "Make", "Size", "Price")
+//@Parameters({"fromYear", "Make", "fromSize", "toSize", "toPrice")
     public void checkResults(){
         String url = Browser.getLocation();
         System.out.println("Starting step4");
@@ -58,7 +58,7 @@ public class ResultsPage extends BaseForm {
             System.out.println("Searching for year");
             String year = new Label(By.xpath(".//*[@class=\"product-specs__table\"]/tbody[1]/tr[2]/td[2]/span[contains(.,\"2013\") or contains(.,\"2014\") or contains(.,\"2015\")  or contains(.,\"2016\")  or contains(.,\"2017\")]"),"Check Year").getText();
            //split(" ") the year. get the year[0], 
-            // check @param Year is <= Integer.parseInt(year[0])
+            // check @param fromYear is <= Integer.parseInt(year[0])
             String price = new Label(By.xpath(".//*[@class=\"offers-description__flex\"]/div/div[1]/a"),"Check price").getText();
             String lowestPrice = price.split(",")[0];
             int lPrice = Integer.parseInt(lowestPrice);
