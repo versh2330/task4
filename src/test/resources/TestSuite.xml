@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Demo Test Plan" verbose="1">
-	
-	<test name="Demo Test" preserve-order="true">
-		<classes>
- 			<class name="testclass.tests.TvTest" />
+    <parameter name="priceLessThan" value="1000"/>
+    <parameter name="producedBefore" value="2013"/>
+    <test name="Demo Test" preserve-order="true">
+        <classes>
+            <class name="testclass.tests.TvTest"/>
         </classes>
-	</test>
+    </test>
 </suite>

@@ -236,93 +236,97 @@
         </plugins>
     </build>
 
-    <!--<reporting>-->
-        <!--<plugins>-->
+   <!-- <reporting>
+        <plugins>
 
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-checkstyle-plugin</artifactId>-->
-                <!--<version>2.17</version>-->
-                <!--<configuration>-->
-                    <!--<includeTestSourceDirectory>true</includeTestSourceDirectory>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId></artifactId>
+                <version>2.17</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>checkstyle</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
 
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-surefire-report-plugin</artifactId>-->
-                <!--<version>2.16</version>-->
-                <!--<configuration>-->
-                    <!--<showSuccess>true</showSuccess>-->
-                <!--</configuration>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>2.16</version>
+                <configuration>
+                    <showSuccess>true</showSuccess>
+                </configuration>
 
-            <!--</plugin>-->
+            </plugin>
 
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-project-info-reports-plugin</artifactId>-->
-                <!--<version>2.1.1</version>-->
-                <!--<reportSets>-->
-                    <!--<reportSet>-->
-                        <!--<reports>-->
-                            <!--<report>summary</report>-->
-                            <!--<report>index</report>-->
-                        <!--</reports>-->
-                    <!--</reportSet>-->
-                <!--</reportSets>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.1.1</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>summary</report>
+                            <report>index</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
 
-            <!--</plugin>-->
-            <!--<plugin>-->
-                <!--<groupId>org.codehaus.mojo</groupId>-->
-                <!--<artifactId>taglist-maven-plugin</artifactId>-->
-                <!--<version>2.4</version>-->
-                <!--<configuration>-->
-                    <!--<tagListOptions>-->
-                        <!--<tagClasses>-->
-                            <!--<tagClass>-->
-                                <!--<displayName>Todo Work</displayName>-->
-                                <!--<tags>-->
-                                    <!--<tag>-->
-                                        <!--<matchString>todo</matchString>-->
-                                        <!--<matchType>ignoreCase</matchType>-->
-                                    <!--</tag>-->
-                                    <!--<tag>-->
-                                        <!--<matchString>FIXME</matchString>-->
-                                        <!--<matchType>exact</matchType>-->
-                                    <!--</tag>-->
-                                <!--</tags>-->
-                            <!--</tagClass>-->
-                        <!--</tagClasses>-->
-                    <!--</tagListOptions>-->
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>taglist-maven-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <tagListOptions>
+                        <tagClasses>
+                            <tagClass>
+                                <displayName>Todo Work</displayName>
+                                <tags>
+                                    <tag>
+                                        <matchString>todo</matchString>
+                                        <matchType>ignoreCase</matchType>
+                                    </tag>
+                                    <tag>
+                                        <matchString>FIXME</matchString>
+                                        <matchType>exact</matchType>
+                                    </tag>
+                                </tags>
+                            </tagClass>
+                        </tagClasses>
+                    </tagListOptions>
 
-                <!--</configuration>-->
-            <!--</plugin>-->
-            <!--&lt;!&ndash;<plugin>&ndash;&gt;-->
-                <!--&lt;!&ndash;<groupId>org.apache.maven.plugins</groupId>&ndash;&gt;-->
-                <!--&lt;!&ndash;<artifactId>maven-javadoc-plugin</artifactId>&ndash;&gt;-->
-                <!--&lt;!&ndash;<version>2.9.1</version>&ndash;&gt;-->
-                <!--&lt;!&ndash;<configuration>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<stylesheetfile>${basedir}/src/main/javadoc/stylesheet.css</stylesheetfile>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<show>public</show>&ndash;&gt;-->
-                <!--&lt;!&ndash;</configuration>&ndash;&gt;-->
-            <!--&lt;!&ndash;</plugin>&ndash;&gt;-->
-            <!--&lt;!&ndash;<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-pmd-plugin</artifactId>-->
-                <!--<version>2.6</version>-->
-                <!--<configuration>-->
-                    <!--<targetJdk>1.6</targetJdk>-->
-                    <!--<includeTests>true</includeTests>-->
-                <!--</configuration>-->
-            <!--</plugin>&ndash;&gt;-->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <configuration>
+                    <stylesheetfile>${basedir}/src/main/javadoc/stylesheet.css</stylesheetfile>
+                    <show>public</show>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <targetJdk>1.6</targetJdk>
+                    <includeTests>true</includeTests>
+                </configuration>
+            </plugin>-
 
-            <!--&lt;!&ndash;<plugin>&ndash;&gt;-->
-                <!--&lt;!&ndash;<groupId>org.codehaus.mojo</groupId>&ndash;&gt;-->
-                <!--&lt;!&ndash;<artifactId>jdepend-maven-plugin</artifactId>&ndash;&gt;-->
-                <!--&lt;!&ndash;<version>2.0-beta-2</version>&ndash;&gt;-->
-            <!--&lt;!&ndash;</plugin>&ndash;&gt;-->
-        <!--</plugins>-->
-    <!--</reporting>-->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jdepend-maven-plugin</artifactId>
+                <version>2.0-beta-2</version>
+            </plugin>
+        </plugins>
+    </reporting>-->
     <properties>
         <project.reporting.outputEncoding>Cp1251</project.reporting.outputEncoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
