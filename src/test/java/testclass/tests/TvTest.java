@@ -8,6 +8,7 @@ import testclass.pages.MainPage;
 import testclass.pages.ResultsPage;
 import webdriver.BaseTest;
 
+
 /**
  * Created by Alexandr.Vershok on 3/20/2017.
  */
@@ -16,10 +17,12 @@ public class TvTest extends BaseTest {
     private String producedBefore;
 
 
+
     @BeforeSuite
     @Parameters({"priceLessThan", "producedBefore"})
     public void setUp(String priceLessThan, String producedBefore) {
-        System.setProperty("webdriver.chrome.driver", "./../../../resources/chromedriver.exe"); //Will it work?
+        System.setProperty("webdriver.chrome.driver", "D:\\Selenium Tests\\task4\\src\\test\\resources\\chromedriver.exe"); //Will it work?
+
         this.priceLessThan = priceLessThan;
         this.producedBefore = producedBefore;
     }

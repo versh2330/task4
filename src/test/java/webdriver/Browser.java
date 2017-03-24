@@ -161,7 +161,7 @@ public final class Browser {
      *
      * @param url Url
      */
-    public static void navigate(final String url) {
+    public void navigate(final String url) {
         driver.navigate().to(url);
     }
 
@@ -170,7 +170,7 @@ public final class Browser {
      *
      * @return driver
      */
-    public static RemoteWebDriver getDriver() {
+    public RemoteWebDriver getDriver() {
         return driver;
     }
 
@@ -179,7 +179,7 @@ public final class Browser {
      *
      * @return current URL
      */
-    public static String getLocation() {
+    public String getLocation() {
         return driver.getCurrentUrl();
     }
 
