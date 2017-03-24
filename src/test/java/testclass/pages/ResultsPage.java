@@ -134,6 +134,7 @@ public class ResultsPage extends BaseForm {
             int diagonalInt = Integer.parseInt(diagonal.split("\"")[0]);
             assertTrue((diagLow < diagonalInt) && (diagonalInt < diagHi));
             count++;
+            info("Parameters match");
         }
     }
 }
