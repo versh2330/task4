@@ -89,6 +89,7 @@ public class ResultsPage extends BaseForm {
 
         listToStrings(listOfResults);
         assertEquals(listOfResults.size(), arrayOfStrings.length);
+        info("Found " + arrayOfStrings.length + " matches");
 
         for (String s : arrayOfStrings) {
 
@@ -104,12 +105,12 @@ public class ResultsPage extends BaseForm {
             );
 
             //Check Year
-            info("Checking year of " + count + " result");
+            info("Checking parameters of result  " + count);
             String year = new Label(By.xpath("//*[@id='specs']//td[contains(text(),'Дата выхода на рынок')]/following-sibling::td/span")).getText();
             assertTrue(Integer.parseInt(produced) >= Integer.parseInt(year.substring(0, 3)));
 
             //Check Price
-            info("Checking price of " + count + " result");
+
             String price = new Label(By.xpath("//*[@class='offers-description__flex']/div/div[1]/a"), "Check price").getText();
             int priceLessThanInt = Integer.parseInt(priceLessThan);
             if (priceLessThanInt >= Integer.parseInt(price.split(",")[0])) {
@@ -123,12 +124,12 @@ public class ResultsPage extends BaseForm {
             }
 
             //Check maker
-            info("Checking maker of " + count + " result");
+
             String makerInResults = new Label(By.xpath("//*[@class='breadcrumbs__link']//span[contains(.,'Samsung')]")).getText();
             assertTrue(makerInResults.toLowerCase().contains(maker.toLowerCase()));
 
             //Check diagonal
-            info("Checking diagonal of " + count + " result");
+
             String diagonal = new Label(By.xpath("//p[@itemprop='description']")).getText();
             int diagonalInt = Integer.parseInt(diagonal.split("\"")[0]);
             assertTrue((diagLow < diagonalInt) && (diagonalInt < diagHi));
