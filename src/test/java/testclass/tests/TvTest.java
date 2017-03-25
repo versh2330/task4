@@ -1,6 +1,5 @@
 package testclass.tests;
 
-
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 import testclass.pages.CatalogPage;
@@ -17,12 +16,11 @@ public class TvTest extends BaseTest {
     private String producedBefore;
 
 
-
     @BeforeSuite
     @Parameters({"priceLessThan", "producedBefore"})
     public void setUp(String priceLessThan, String producedBefore) {
-        System.setProperty("webdriver.chrome.driver", "D:\\Selenium Tests\\task4\\src\\test\\resources\\chromedriver.exe"); //Will it work?
-
+        System.setProperty("webdriver.gecko.driver", "\\src\\java\\resources\\geckodriver.exe");
+        System.setProperty("webdriver.chrome.driver", "\\src\\java\\resources\\chromedriver.exe");
         this.priceLessThan = priceLessThan;
         this.producedBefore = producedBefore;
     }
